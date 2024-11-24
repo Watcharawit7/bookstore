@@ -1,2 +1,8 @@
-
+<p-button
+  *ngIf="isButtonVisible"
+  [routerLink]="['book']"
+  label="Book List"
+  severity="help"
+  (onClick)="hideButton()"
+/>
 <router-outlet></router-outlet>

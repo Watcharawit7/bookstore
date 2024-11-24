@@ -1,11 +1,13 @@
-.p-field {
-    margin-bottom: 1rem;
-}
-
-.small-input {
-    width: 300px;
-}
-
-.br {
-    text-align: center;
-}
+.grid {
+    gap: 1rem; /* เพิ่มช่องว่างระหว่างฟิลด์ */
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .p-inputtext {
+    width: 220px;
+  }

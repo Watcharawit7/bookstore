@@ -1,18 +1,37 @@
-<ng-container [formGroup]="bookForm">
-    <br class="card flex flex-column md:flex-row gap-3">
-      <p-inputGroup class="small-input" >
-          <p-inputGroupAddon >
-              <i class="pi pi-user"></i>
-          </p-inputGroupAddon>
-          <input pInputText placeholder="Name" formControlName="name" data-testid="fname"  class="small-input"/>
-      </p-inputGroup>
-      <p-inputGroup class="small-input">
-          <p-inputGroupAddon >$</p-inputGroupAddon>
-          <input type="number" pInputText placeholder="Price"  formControlName="price" data-testid="fprice"/>
-          <p-inputGroupAddon >.00</p-inputGroupAddon>
-      </p-inputGroup>
-      <p-inputGroup class="small-input">
-          <p-inputGroupAddon>Page</p-inputGroupAddon>
-          <input type="number" pInputText placeholder="Page"  formControlName="page" data-testid="fpage"  />
-      </p-inputGroup>
-    </ng-container>
+<ng-container [formGroup]="bookForm" class="p-fluid grid">
+  <div class="col-12 md:col-6">
+    <label for="name">Name</label>
+    <input 
+      id="name" 
+      pInputText 
+      type="text" 
+      formControlName="name" 
+      data-testid="fname" 
+      class="p-inputtext p-component" 
+    />
+  </div>
+
+  <div class="col-12 md:col-6">
+    <label for="price">Price</label>
+    <input 
+      id="price" 
+      pInputText 
+      type="number" 
+      formControlName="price" 
+      data-testid="fprice" 
+      class="p-inputtext p-component" 
+    />
+  </div>
+
+  <div class="col-12 md:col-6">
+    <label for="page">Page</label>
+    <input 
+      id="page" 
+      pInputText 
+      type="number" 
+      formControlName="page" 
+      data-testid="fpage" 
+      class="p-inputtext p-component" 
+    />
+  </div>
+</ng-container>

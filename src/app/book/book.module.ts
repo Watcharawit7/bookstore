@@ -19,13 +19,18 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { RippleModule } from 'primeng/ripple';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
-
-
-
+import { BookListComponent } from './book-list/book-list.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookCreateComponent } from './book-create/book-create.component';
 @NgModule({
   declarations: [
     BookCrudComponent,
-    BookFormComponent
+    BookFormComponent,
+    BookListComponent,
+    BookDetailComponent,
+    BookEditComponent,
+    BookCreateComponent,
   ],
   imports: [
     CommonModule,
@@ -45,13 +50,9 @@ import { ToastModule } from 'primeng/toast';
     TagModule,
     DialogModule,
     InputNumberModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [
-    provideHttpClient()   
-  
-  ],
-  bootstrap: [AppComponent]
-
+  providers: [provideHttpClient()],
+  bootstrap: [AppComponent],
 })
-export class BookModule { }
+export class BookModule {}

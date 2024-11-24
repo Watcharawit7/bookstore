@@ -1,0 +1,18 @@
+<div class="flex align-items-center justify-content-center">
+  <h1>create works!</h1>
+</div>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div class="flex align-items-center justify-content-center gap-2 mb-4">
+    <app-book-form [bookForm]="bookForm"></app-book-form>
+  </div>
+  <div class="flex align-items-center justify-content-center gap-2">
+    <p-button
+      type="submit"
+      data-testid="create-book"
+      label="Edit"
+      [rounded]="true"
+      severity="success"
+      class="gap-2"
+    />
+  </div>
+</form>
