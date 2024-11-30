@@ -1,8 +1,33 @@
-<p>book-detail works!</p>
-<a (click)="deleteBook()" data-testid="delete-book">Delete</a>
-<button [routerLink]="['/book/edit', book.id]" data-testid="edit-book">
-  Edit
-</button>
-<pre>
+<div class="flex align-items-center justify-content-center">
+  <h1>Book detail!</h1>
+</div>
+<div class="flex align-items-center justify-content-center">
+  <pre>
     {{ book | json }}
-</pre>
+  </pre>
+</div>
+<div class="flex align-items-center justify-content-center gap-2">
+  <p-button
+    data-testid="delete-book"
+    label="Delete"
+    [rounded]="true"
+    (click)="deleteBook()"
+    severity="danger"
+    class="gap-2"
+  />
+  <p-button
+    routerLink="/book"
+    label="Home"
+    [rounded]="true"
+    severity="info"
+    class="gap-2"
+  />
+  <p-button
+    [routerLink]="['/book/edit', book.id]"
+    data-testid="edit-book"
+    label="Edit"
+    [rounded]="true"
+    severity="success"
+    class="gap-2"
+  />
+</div>
